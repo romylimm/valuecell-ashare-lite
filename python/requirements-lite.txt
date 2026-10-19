@@ -1,0 +1,6 @@
+# Separate from the full trading/multi-agent distribution.
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+httpx>=0.27,<1
+loguru>=0.7,<1
+akshare>=1.19.1,<2

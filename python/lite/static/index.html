@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ValueCell Lite · A 股研究</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside><a class="brand" href="/">V<span>ValueCell <small>LITE</small></span></a>
+    <div class="nav active">◈ &nbsp; 个股分析</div>
+    <div class="side-note">让研究从一只股票开始。<br>免费数据 · 来源可追溯</div>
+    <footer>本地研究工作台<br><span>A 股 / 沪 · 深 · 北</span></footer>
+  </aside>
+  <main>
+    <header><span>研究工作台 / 个股分析</span><span id="health">正在连接数据服务…</span></header>
+    <section class="intro"><div class="eyebrow">A-SHARE RESEARCH</div>
+      <h1>看懂一只股票，从这里开始。</h1>
+      <p>聚合行情、财务与新闻，把数据整理成有依据的研究线索。</p>
+    </section>
+    <form id="form" class="search-panel">
+      <label for="symbol">股票代码</label>
+      <div class="search-row"><input id="symbol" name="symbol" placeholder="输入六位 A 股代码，如 600519" maxlength="16" required autocomplete="off"><button id="submit" type="submit">开始分析 ↗</button></div>
+      <div class="options"><span>试一下： <button type="button" class="example" data-code="600519">贵州茅台</button><button type="button" class="example" data-code="000001">平安银行</button><button type="button" class="example" data-code="300750">宁德时代</button></span>
+        <label class="ai-option"><input id="use-ai" type="checkbox" disabled> 添加 AI 解读 <span id="model-label">未配置模型</span></label></div>
+    </form>
+    <div id="status" role="status" aria-live="polite"></div>
+    <section id="empty" class="empty"><div class="empty-icon">⌁</div><h2>一份分析，四类证据</h2><p>输入股票代码，查看最新报价、历史走势、财务指标与近期新闻。</p>
+      <div class="evidence"><span>01 &nbsp; 行情快照</span><span>02 &nbsp; 价格趋势</span><span>03 &nbsp; 财务数据</span><span>04 &nbsp; 新闻线索</span></div></section>
+    <article id="report" hidden>
+      <div class="report-heading"><div><div class="eyebrow" id="report-code"></div><h2 id="stock-name"></h2><p id="report-time" class="muted"></p></div><button class="secondary" id="download" type="button">导出分析数据 ↓</button></div>
+      <div class="metrics" id="metrics"></div>
+      <div class="grid"><section class="card"><h3>价格趋势 <span>前复权 · 日线</span></h3><canvas id="chart" height="220" role="img" aria-label="历史前复权收盘价格走势"></canvas><p class="muted" id="chart-caption"></p><div id="history-source" class="source"></div></section>
+        <section class="card"><h3>研究摘要 <span>基于数据计算</span></h3><ul id="observations"></ul><div class="source" id="quote-source"></div></section></div>
+      <div class="grid"><section class="card"><h3>财务指标 <span>最新可获取报告期</span></h3><p class="muted">金额按元展示，比率附单位；保留源站原始数值供核验。</p><div class="table-wrap"><table><thead><tr><th>报告期</th><th>指标</th><th>数值</th></tr></thead><tbody id="financials"></tbody></table></div><div id="financials-source" class="source"></div></section>
+        <section class="card"><h3>新闻线索 <span>按发布时间排序</span></h3><div id="news"></div><div id="news-source" class="source"></div></section></div>
+      <section class="card" id="ai-card" hidden><h3>AI 解读 <span id="ai-status"></span></h3><div id="ai-text"></div></section>
+      <section class="risk"><h3>数据与风险提示</h3><ul id="warnings"></ul></section>
+    </article>
+    <div class="disclaimer">仅供研究参考，不构成投资建议。免费数据源可能延迟或暂时不可用，请核对数据日期与原始来源。</div>
+  </main>
+</body></html>

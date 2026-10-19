@@ -1,0 +1,28 @@
+"""Display labels and native units for the THS abstract metric identifiers."""
+
+METRICS: dict[str, tuple[str, str]] = {
+    "operating_income_total": ("营业总收入", "元"),
+    "parent_holder_net_profit": ("归母净利润", "元"),
+    "index_deduct_holder_net_profit": ("扣非归母净利润", "元"),
+    "calculate_operating_income_total_yoy_growth_ratio": ("营业总收入同比", "%"),
+    "calculate_parent_holder_net_profit_yoy_growth_ratio": ("归母净利润同比", "%"),
+    "deduct_net_profit_yoy_growth_ratio": ("扣非净利润同比", "%"),
+    "basic_eps": ("基本每股收益", "元/股"),
+    "index_weighted_avg_roe": ("加权净资产收益率", "%"),
+    "index_full_diluted_roe": ("摊薄净资产收益率", "%"),
+    "sale_gross_margin": ("销售毛利率", "%"),
+    "sale_net_interest_ratio": ("销售净利率", "%"),
+    "assets_debt_ratio": ("资产负债率", "%"),
+    "calc_per_net_assets": ("每股净资产", "元/股"),
+    "index_per_operating_cash_flow_net": ("每股经营现金流净额", "元/股"),
+    "per_capital_reserve": ("每股资本公积", "元/股"),
+    "per_undistributed_profits": ("每股未分配利润", "元/股"),
+    "equity_ratio": ("产权比率", "倍"),
+    "quick_ratio": ("速动比率", "倍"),
+    "conservative_quick_ratio": ("保守速动比率", "倍"),
+    "current_ratio": ("流动比率", "倍"),
+    "inventory_turnover_ratio": ("存货周转率", "次"),
+    "inventory_turnover_days": ("存货周转天数", "天"),
+    "business_cycle": ("营业周期", "天"),
+    "receive_accounts_turnover_days": ("应收账款周转天数", "天"),
+}
